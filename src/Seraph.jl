@@ -1,5 +1,8 @@
 module Seraph
 
+include("Glyph.jl")
+using .Glyph
+
 using GLMakie
 using GLMakie: events
 using FileIO: load
