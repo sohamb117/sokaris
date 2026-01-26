@@ -1,7 +1,17 @@
-using Images, ImageFiltering, ImageTransformations, Colors, Random, Seraph.Glyph
+using Images, ImageFiltering, ImageTransformations, Colors, Random
+using Sokaris.Glyph
+using Sokaris.Imhotep
 
-img = load("inputs/input.png")
+img = load("inputs/input.png") ▷ float
+overlay = load("inputs/overlay.png") ▷ float
 
-processed = img
+processed = (
+    img
+    ▷ invert
+    ▷ gamma(0.85)
+    ▷ noise(0.1)
+    ▷ gaussian(2)
+    ▷ 𓇬
+)
 
 save("output.png", processed)

@@ -1,7 +1,4 @@
-module Seraph
-
-include("Glyph.jl")
-using .Glyph
+module Horus
 
 using GLMakie
 using GLMakie: events
@@ -91,7 +88,7 @@ function view_image(path::String="output.png"; max_size=800)
         end
     end
 
-    GLMakie.activate!(title = "Seraph Viewer")
+    GLMakie.activate!(title = "Horus")
     display(fig)
     return fig
 end
